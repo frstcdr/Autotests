@@ -9,6 +9,8 @@ services:
     ports:
       - 4444:4444
       - 5900:5900
+    
+    restart: always
 
   pytest:
     build:
@@ -18,5 +20,5 @@ services:
     volumes:
       - ./screenshots:/DockerPython/screenshots/
     tty: true
-
-  
+    
+    restart: always
