@@ -2,7 +2,7 @@ version: "3"
 
 services:
   chrome:
-    image: seleniarm/standalone-chromium
+    image: selenium/standalone-chrome
     container_name: chrome
     volumes:
       - /dev/shm:/dev/shm

@@ -2,10 +2,13 @@ FROM python:3
 
 RUN pip install --upgrade pip && \
     pip install selenium pytest
+    
+    
 
 ENV TZ "Russia/Moscow"
 
 WORKDIR /DockerPython
 COPY ./tests/ /DockerPython/tests
+
 
 
