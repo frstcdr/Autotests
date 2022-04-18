@@ -47,7 +47,7 @@ def pytest_runtest_makereport(item, call):
             destinationFile = os.path.join(report_directory, file_name)
             driver.save_screenshot(destinationFile)
             if file_name:
-                html = '<div><img src ="../screenshots/%s" alt="screenshot" style="width:300px; height=200px;" onclick ="window.open(this.src)" align="right"/></div>' % file_name
+                html = '<div><img src ="../screenshots/%s" alt="screenshot" style="width:300px; height:200px;" onclick ="window.open(this.src)" align="right"/></div>' % file_name
             extra.append(pytest_html.extras.html(html))
         report.extra = extra
 
