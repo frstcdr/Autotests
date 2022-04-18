@@ -1,0 +1,16 @@
+FROM python:3
+
+RUN pip install --upgrade pip && \
+    pip install selenium pytest && \
+    pip install webdriver-manager && \
+    pip install pytest-html
+
+ENV TZ "Russia/Moscow"
+
+WORKDIR /DockerPython
+COPY ./base/ /DockerPython/base
+COPY ./pom/ /DockerPython/pom
+COPY ./tests/ /DockerPython/tests
+COPY ./conftest.py /DockerPython/
+COPY ./pytest.ini /DockerPython/
+

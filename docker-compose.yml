@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  chrome:
+    image: seleniarm/standalone-chromium
+    container_name: chrome
+    volumes:
+      - /dev/shm:/dev/shm
+    ports:
+      - 4444:4444
+      - 5900:5900
+    
+    restart: always
+
+  pytest:
+    build:
+      context: ./
+      dockerfile: Dockerfile_pytest
+    container_name: pytest
+    volumes:
+      - ./screenshots:/DockerPython/screenshots/
+      - ./reports:/DockerPython/reports/
+    tty: true
+    
+    restart: always
