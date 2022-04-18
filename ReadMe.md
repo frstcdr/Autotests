@@ -10,7 +10,7 @@
 
 ## How to use automaticaly
 1. Execute `make run-test` is automaticaly deploying project and run Bash inside the container
-2. Run `pytest test` (if you don't need a report.html)
+2. Run `pytest tests` (if you don't need a report.html)
 3. Run `py.test --html=reports/demoreport.html` for automatic report generation
 4. Run `pytest -s -v -m smoke tests` (if ypu need special tests with marks)
 5. Execute `exit` (For exit from container)
