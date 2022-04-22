@@ -1,5 +1,10 @@
 *Use that version only for mac with M1 processor*
 
+Before all:
+Put your selenium base methods and operations in to `base` dir
+Put your python tests in to `tests` dir
+Make `pom` dir 
+Put your page object models in to `pom` dir
 ## How to use manualy
 1. Move locally into the `docker-pytest` folder
 2. Run `docker-compose up -d --build`
